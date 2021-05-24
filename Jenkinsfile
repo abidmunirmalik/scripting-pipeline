@@ -1,7 +1,7 @@
 // Scripted Pipeline - single-line comment
 
 node('master') {
-    stage('BUild') {
+    stage('Build') {
         buildFunction()
     }
     stage('Test') {
@@ -13,7 +13,10 @@ node('master') {
 }
 // Step functions
 def buildFunction() {
-    println("Building....")
+    println("Build Stage...")
+    dir('scripts') {
+        sh "./buildScript.sh"
+    }
 }
 
 def testFunction() {
