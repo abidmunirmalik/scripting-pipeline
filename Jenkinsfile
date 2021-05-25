@@ -1,6 +1,6 @@
 // Scripted Pipeline - single-line comment
 
-node('master') {
+node('vjenkinsslv01 (waops)') {
     stage('Build') {
         buildFunction()
     }
